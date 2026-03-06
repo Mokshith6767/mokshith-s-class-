@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Activity</title>
+</head>
+<body>
+
+    <!-- 1. The Title Element -->
+    <h1 id="page-title">Learning HTML DOM</h1>
+
+    <!-- 2. The Button to trigger the action -->
+    <button id="update-btn">Display Title Below</button>
+
+    <!-- 3. Two paragraphs to display the value -->
+    <p id="output1">First paragraph will change...</p>
+    <p id="output2">Second paragraph will change...</p>
+
+    <script>
+        // Select the button using its ID
+        const btn = document.getElementById('update-btn');
+
+        // Add a click event listener to the button
+        btn.addEventListener('click', function() {
+            
+            // Fetch the text from the title node
+            const titleText = document.getElementById('page-title').innerText;
+
+            // Display the value in the first paragraph
+            document.getElementById('output1').innerText = titleText;
+
+            // Display the value in the second paragraph
+            document.getElementById('output2').innerText = titleText;
+            
+            console.log("Title text copied to paragraphs!");
+        });
+    </script>
+
+</body>
+</html>
